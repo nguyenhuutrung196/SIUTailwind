@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/7ec1e10257.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://kit.fontawesome.com/7ec1e10257.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css"/>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.4/flowbite.min.css" rel="stylesheet" />
+    <link href="/dist/output.css" rel="stylesheet">
+   
+    <title>News Detail (new)</title>
+</head>
+<body class="font-interTight">
+
+    <!-- search bar -->
+    <div class="h-[45px] bg-[#333333]">
+        <div class="container mx-auto text-[#FFFFFF] ">
+            <div class=" h-[45px] flex justify-end">
+                <form action="#" class="border border-y-[#333333] w-[269px]  ">
+                    <input type="search" name="search" id="search" placeholder="Search..." class="bg-[#333333] h-full px-4">
+                    <button type="submit">
+                        <i class="fa-solid fa-magnifying-glass text-white"></i>
+                    </button>
+                </form>
+                <div class="pt-3 ml-3 text-sm font-bold">
+                    <a href="#">
+                        EN
+                        <i class="fa-solid fa-caret-down pl-2"></i>
+                    </a>
+                </div>
+            </div>
+            
+        </div>
+    </div>
+
+    <!-- menu -->
+    <div class="bg-white border-gray-200 px-2 py-2.5 rounded lg:justify-items-center">
+        <div class="container flex flex-wrap items-center justify-between mx-auto">
+          <a href="#" class="flex items-center">
+              <img src="./img/SIU LOGO - COLOR 1.png" class="h-9 w-full md:h-[49px] md:w-[214px]" alt="SIULogo" />
+          </a>
+          <button type="button" onclick="toggleMenu()" class="inline-flex items-center p-2 ml-3 text-lg text-gray-500 rounded-lg lg:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 ">
+            <i class="fa-solid fa-bars"></i>
+          </button>
+          <div class="hidden w-full lg:block lg:w-auto lg:pb-3" id="navbarShow">
+            <ul class="lg:flex mt-4 border border-gray-100 rounded-lg bg-gray-50 lg:space-x-8 2xl:space-x-28 text-base font-bold border-none md:bg-white uppercase">
+              <li>
+                <a href="home.html" class="flex py-2 pl-3 pr-4 text-[#333333] rounded hover:bg-gray-100 lg:hover:bg-transparent  lg:hover:text-[#E41623] lg:hover:underline lg:p-0"><i class="fa-solid fa-house logohome"></i></a>
+              </li>
+              <li>
+                <a href="about.html" class="flex py-2 pl-3 pr-4 text-[#333333] rounded hover:bg-gray-100 lg:hover:bg-transparent  lg:hover:text-[#E41623] lg:hover:underline lg:p-0">ABOUT US</a>
+              </li>
+              
+              <li>
+                <button id="mega-menu-dropdown-button" data-dropdown-toggle="mega-menu-dropdown" class="flex py-2 pl-3 pr-4 text-[#333333] rounded hover:bg-gray-100 lg:hover:bg-transparent  lg:hover:text-[#E41623] lg:hover:underline lg:p-0">
+                    PRODUCTS <svg aria-hidden="true" class="w-5 h-5 ml-1 md:w-4 md:h-4" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd"></path></svg>
+                </button>
+                <div id="mega-menu-dropdown" class="absolute z-10 grid hidden w-auto grid-cols-2 text-sm bg-white border border-gray-100 rounded-lg shadow-md lg:grid-cols-4">
+                    <div class="p-4 pb-0 text-gray-900 md:pb-4">
+                        <ul class="space-y-4" aria-labelledby="mega-menu-dropdown-button">
+                            <h3 class="font-bold text-lg text-[#E41623] uppercase pt-4">
+                                Gasket
+                            </h3>
+                            <ul class="font-normal text-sm">
+                                <li class="hover:text-[#E41623] py-2"><a href="#">
+                                    <i class="fa-solid fa-square mr-2"></i>
+                                    Spiral Wound Gasket
+                                </a></li>
+                                <li class="hover:text-[#E41623] py-2"><a href="#">
+                                    <i class="fa-solid fa-square mr-2"></i>
+                                    Seat Gasket
+                                </a></li>
+                                <li class="hover:text-[#E41623] py-2"><a href="#">
+                                    <i class="fa-solid fa-square mr-2"></i>
+                                    Sello Seal Gasket
+                                </a></li>
+                                <li class="hover:text-[#E41623] py-2"><a href="#">
+                                    <i class="fa-solid fa-square mr-2"></i>
+                                    Isolated Gasket
+                                </a></li>
+                                <li class="hover:text-[#E41623] py-2"><a href="#">
+                                    <i class="fa-solid fa-square mr-2"></i>
+                                    Heat Exchanger Gasket
+                                </a></li>
+                                <li class="hover:text-[#E41623] py-2"><a href="#">
+                                    <i class="fa-solid fa-square mr-2"></i>
+                                    Low Stress Gasket
+                                </a></li>
+                                <li class="hover:text-[#E41623] py-2"><a href="#">
+                                    <i class="fa-solid fa-square mr-2"></i>
+                                    Cage Gasket
+                                </a></li>
+                                <li class="hover:text-[#E41623] py-2"><a href="#">
+                                    <i class="fa-solid fa-square mr-2"></i>
+                                    Body Gasket
+                                </a></li>
+                                <li class="hover:text-[#E41623] py-2"><a href="#">
+                                    <i class="fa-solid fa-square mr-2"></i>
+                                    Carbon Gasket
+                                </a></li>
+                                <li class="hover:text-[#E41623] py-2"><a href="#">
+                                    <i class="fa-solid fa-square mr-2"></i>
+                                    Die-Formed Ring
+                                </a></li>
+                                <li class="hover:text-[#E41623] py-2"><a href="#">
+                                    <i class="fa-solid fa-square mr-2"></i>
+                                    Ring Type Joint Gasket
+                                </a></li>
+                                <li class="hover:text-[#E41623] py-2"><a href="#">
+                                    <i class="fa-solid fa-square mr-2"></i>
+                                    Graphite gasket
+                                </a></li>
+                                <li class="hover:text-[#E41623] py-2"><a href="#">
+                                    <i class="fa-solid fa-square mr-2"></i>
+                                    Camprofile Gasket
+                                </a></li>
+                                <li class="hover:text-[#E41623] py-2"><a href="#">
+                                    <i class="fa-solid fa-square mr-2"></i>
+                                    PTFE Gasket
+                                </a></li>
+                            </ul>
+                    
+                            <h3 class="font-bold text-lg text-[#E41623] uppercase pt-4">
+                                CHEMICALS
+                            </h3>
+                            <ul class="font-normal text-sm">
+                                <li class="hover:text-[#E41623] py-2"><a href="#">
+                                    <i class="fa-solid fa-square mr-2"></i>
+                                    Degreaser
+                                </a></li>
+                                <li class="hover:text-[#E41623] py-2"><a href="#">
+                                    <i class="fa-solid fa-square mr-2"></i>
+                                    Contact Cleaner
+                                </a></li>
+                                <li class="hover:text-[#E41623] py-2"><a href="#">
+                                    <i class="fa-solid fa-square mr-2"></i>
+                                    Rust Remover
+                                </a></li>
+                                <li class="hover:text-[#E41623] py-2"><a href="#">
+                                    <i class="fa-solid fa-square mr-2"></i>
+                                    Water Treatment
+                                </a></li>
+                            </ul>
+                    
+                            <h3 class="font-bold text-lg text-[#E41623] uppercase pt-4">
+                                BLASTING MACHINE
+                            </h3>
+                            <ul class="font-normal text-sm">
+                                <li class="hover:text-[#E41623] py-2"><a href="#">
+                                    <i class="fa-solid fa-square mr-2"></i>
+                                    Feed Unit
+                                </a></li>
+                                <li class="hover:text-[#E41623] py-2"><a href="#">
+                                    <i class="fa-solid fa-square mr-2"></i>
+                                    Recycle Unit
+                                </a></li>
+                                <li class="hover:text-[#E41623] py-2"><a href="#">
+                                    <i class="fa-solid fa-square mr-2"></i>
+                                    Nozzles
+                                </a></li>
+                            </ul>
+                        </ul>
+                    </div>
+
+                    <div class="p-4 pb-0 text-gray-900 md:pb-4">
+                        <ul class="space-y-4">
+                            <h3 class="font-bold text-lg text-[#E41623] uppercase pt-4">
+                                packing
+                            </h3>
+                            <ul class="font-normal text-sm">
+                                <li class="hover:text-[#E41623] py-2"><a href="#">
+                                    <i class="fa-solid fa-square mr-2"></i>
+                                    Die-Formed Packing
+                                </a></li>
+                                <li class="hover:text-[#E41623] py-2"><a href="#">
+                                    <i class="fa-solid fa-square mr-2"></i>
+                                    Balance Seal
+                                </a></li>
+                                <li class="hover:text-[#E41623] py-2"><a href="#">
+                                    <i class="fa-solid fa-square mr-2"></i>
+                                    PTFE Packing
+                                </a></li>
+                                <li class="hover:text-[#E41623] py-2"><a href="#">
+                                    <i class="fa-solid fa-square mr-2"></i>
+                                    Carbon Packing
+                                </a></li>
+                                <li class="hover:text-[#E41623] py-2"><a href="#">
+                                    <i class="fa-solid fa-square mr-2"></i>
+                                    Packing Tools
+                                </a></li>
+                                <li class="hover:text-[#E41623] py-2"><a href="#">
+                                    <i class="fa-solid fa-square mr-2"></i>
+                                    Pressure Seal
+                                </a></li>
+                                <li class="hover:text-[#E41623] py-2"><a href="#">
+                                    <i class="fa-solid fa-square mr-2"></i>
+                                    Slurry Packing
+                                </a></li>
+                            </ul>
+                    
+                            <h3 class="font-bold text-lg text-[#E41623] uppercase pt-4">
+                                LUBRICANTS
+                            </h3>
+                            <ul class="font-normal text-sm">
+                                <li class="hover:text-[#E41623] py-2"><a href="#">
+                                    <i class="fa-solid fa-square mr-2"></i>
+                                    Grease
+                                </a></li>
+                                <li class="hover:text-[#E41623] py-2"><a href="#">
+                                    <i class="fa-solid fa-square mr-2"></i>
+                                    Oil
+                                </a></li>
+                                <li class="hover:text-[#E41623] py-2"><a href="#">
+                                    <i class="fa-solid fa-square mr-2"></i>
+                                    Dispenser
+                                </a></li>
+                                <li class="hover:text-[#E41623] py-2"><a href="#">
+                                    <i class="fa-solid fa-square mr-2"></i>
+                                    Anti-seizer Compound
+                                </a></li>
+                                <li class="hover:text-[#E41623] py-2"><a href="#">
+                                    <i class="fa-solid fa-square mr-2"></i>
+                                    Wire Rope Lubricants
+                                </a></li>
+                                <li class="hover:text-[#E41623] py-2"><a href="#">
+                                    <i class="fa-solid fa-square mr-2"></i>
+                                    Food Grade Lubricants
+                                </a></li>
+                            </ul>
+                    
+                            <h3 class="font-bold text-lg text-[#E41623] uppercase pt-4">
+                                RAW MATERIALS
+                            </h3>
+                            <ul class="font-normal text-sm">
+                                <li class="hover:text-[#E41623] py-2"><a href="#">
+                                    <i class="fa-solid fa-square mr-2"></i>
+                                    Stainless Steel
+                                </a></li>
+                                <li class="hover:text-[#E41623] py-2"><a href="#">
+                                    <i class="fa-solid fa-square mr-2"></i>
+                                    PTFE
+                                </a></li>
+                                <li class="hover:text-[#E41623] py-2"><a href="#">
+                                    <i class="fa-solid fa-square mr-2"></i>
+                                    PEEK
+                                </a></li>
+                                <li class="hover:text-[#E41623] py-2"><a href="#">
+                                    <i class="fa-solid fa-square mr-2"></i>
+                                    Carbon Graphite
+                                </a></li>
+                            </ul>
+                    
+                            <h3 class="font-bold text-lg text-[#E41623] uppercase pt-4">
+                                MRO PRODUCTS
+                            </h3>
+                            <ul class="font-normal text-sm">
+                                <li class="hover:text-[#E41623] py-2"><a href="#">
+                                    <i class="fa-solid fa-square mr-2"></i>
+                                    Special Lubricants
+                                </a></li>
+                                <li class="hover:text-[#E41623] py-2"><a href="#">
+                                    <i class="fa-solid fa-square mr-2"></i>
+                                    Special Cleaner
+                                </a></li>
+                            </ul>
+                        </ul>
+                    </div>
+
+                    <div class="p-4 text-gray-900">
+                        <ul class="space-y-4">
+                            <h3 class="font-bold text-lg text-[#E41623] uppercase pt-4">
+                                O RING
+                            </h3>
+                            <ul class="font-normal text-sm">
+                                <li class="hover:text-[#E41623] py-2"><a href="#">
+                                    <i class="fa-solid fa-square mr-2"></i>
+                                    Viton ORings
+                                </a></li>
+                                <li class="hover:text-[#E41623] py-2"><a href="#">
+                                    <i class="fa-solid fa-square mr-2"></i>
+                                    EPPM ORings
+                                </a></li>
+                                <li class="hover:text-[#E41623] py-2"><a href="#">
+                                    <i class="fa-solid fa-square mr-2"></i>
+                                    ORings Kit
+                                </a></li>
+                                <li class="hover:text-[#E41623] py-2"><a href="#">
+                                    <i class="fa-solid fa-square mr-2"></i>
+                                    PTFE ORings
+                                </a></li>
+                                <li class="hover:text-[#E41623] py-2"><a href="#">
+                                    <i class="fa-solid fa-square mr-2"></i>
+                                    Encapsulated ORings
+                                </a></li>
+                                <li class="hover:text-[#E41623] py-2"><a href="#">
+                                    <i class="fa-solid fa-square mr-2"></i>
+                                    D-Rings
+                                </a></li>
+                                <li class="hover:text-[#E41623] py-2"><a href="#">
+                                    <i class="fa-solid fa-square mr-2"></i>
+                                    V-Rings
+                                </a></li>
+                                <li class="hover:text-[#E41623] py-2"><a href="#">
+                                    <i class="fa-solid fa-square mr-2"></i>
+                                    C-Rings
+                                </a></li>
+                    
+                            </ul>
+                    
+                            <h3 class="font-bold text-lg text-[#E41623] uppercase pt-4">
+                                O RING
+                            </h3>
+                            <ul class="font-normal text-sm">
+                                <li class="hover:text-[#E41623] py-2"><a href="#">
+                                    <i class="fa-solid fa-square mr-2"></i>
+                                    Tube
+                                </a></li>
+                                <li class="hover:text-[#E41623] py-2"><a href="#">
+                                    <i class="fa-solid fa-square mr-2"></i>
+                                    Elbow
+                                </a></li>
+                                <li class="hover:text-[#E41623] py-2"><a href="#">
+                                    <i class="fa-solid fa-square mr-2"></i>
+                                    Union
+                                </a></li>
+                                <li class="hover:text-[#E41623] py-2"><a href="#">
+                                    <i class="fa-solid fa-square mr-2"></i>
+                                    Hoses
+                                </a></li>
+                                <li class="hover:text-[#E41623] py-2"><a href="#">
+                                    <i class="fa-solid fa-square mr-2"></i>
+                                    Couplings
+                                </a></li>
+                                <li class="hover:text-[#E41623] py-2"><a href="#">
+                                    <i class="fa-solid fa-square mr-2"></i>
+                                    Hydraulic Hose
+                                </a></li>
+                                <li class="hover:text-[#E41623] py-2"><a href="#">
+                                    <i class="fa-solid fa-square mr-2"></i>
+                                    Hydraulic Coupling
+                                </a></li>
+                            </ul>
+                    
+                            <h3 class="font-bold text-lg text-[#E41623] uppercase pt-4">
+                                SHIMS
+                            </h3>
+                            <ul class="font-normal text-sm">
+                                <li class="hover:text-[#E41623] py-2"><a href="#">
+                                    <i class="fa-solid fa-square mr-2"></i>
+                                    Stainless Shim
+                                </a></li>
+                                <li class="hover:text-[#E41623] py-2"><a href="#">
+                                    <i class="fa-solid fa-square mr-2"></i>
+                                    Brass Shim
+                                </a></li>
+                                <li class="hover:text-[#E41623] py-2"><a href="#">
+                                    <i class="fa-solid fa-square mr-2"></i>
+                                    Plastic Shim
+                                </a></li>
+                                <li class="hover:text-[#E41623] py-2"><a href="#">
+                                    <i class="fa-solid fa-square mr-2"></i>
+                                    Precut Shim
+                                </a></li>
+                            </ul>
+                    
+                            <h3 class="font-bold text-lg text-[#E41623] uppercase pt-4">
+                                TOOLS
+                            </h3>
+                            <ul class="font-normal text-sm">
+                                <li class="hover:text-[#E41623] py-2"><a href="#">
+                                    <i class="fa-solid fa-square mr-2"></i>
+                                    Power Tools
+                                </a></li>
+                            </ul>
+                        </ul>
+                    </div>
+
+                    <div class="p-4 text-gray-900">
+                        <ul class="space-y-4">
+                            <h3 class="font-bold text-lg text-[#E41623] uppercase pt-4">
+                                HYDRAULIC SEALS
+                            </h3>
+                            <ul class="font-normal text-sm">
+                                <li class="hover:text-[#E41623] py-2"><a href="#">
+                                    <i class="fa-solid fa-square mr-2"></i>
+                                    Piston Seal
+                                </a></li>
+                                <li class="hover:text-[#E41623] py-2"><a href="#">
+                                    <i class="fa-solid fa-square mr-2"></i>
+                                    O Rings
+                                </a></li>
+                                <li class="hover:text-[#E41623] py-2"><a href="#">
+                                    <i class="fa-solid fa-square mr-2"></i>
+                                    Wiper Seal
+                                </a></li>
+                                <li class="hover:text-[#E41623] py-2"><a href="#">
+                                    <i class="fa-solid fa-square mr-2"></i>
+                                    Non-contact Seal
+                                </a></li>
+                                <li class="hover:text-[#E41623] py-2"><a href="#">
+                                    <i class="fa-solid fa-square mr-2"></i>
+                                    Bushing
+                                </a></li>
+                                <li class="hover:text-[#E41623] py-2"><a href="#">
+                                    <i class="fa-solid fa-square mr-2"></i>
+                                    Rod Seal
+                                </a></li>
+                                <li class="hover:text-[#E41623] py-2"><a href="#">
+                                    <i class="fa-solid fa-square mr-2"></i>
+                                    Rotary Seal
+                                </a></li>
+                                <li class="hover:text-[#E41623] py-2"><a href="#">
+                                    <i class="fa-solid fa-square mr-2"></i>
+                                    V-Rings
+                                </a></li>
+                                <li class="hover:text-[#E41623] py-2"><a href="#">
+                                    <i class="fa-solid fa-square mr-2"></i>
+                                    Bearing Bands
+                                </a></li>
+                                <li class="hover:text-[#E41623] py-2"><a href="#">
+                                    <i class="fa-solid fa-square mr-2"></i>
+                                    Spring Seal
+                                </a></li>
+                                <li class="hover:text-[#E41623] py-2"><a href="#">
+                                    <i class="fa-solid fa-square mr-2"></i>
+                                    Backup Seal
+                                </a></li>
+                            </ul>
+                    
+                            <h3 class="font-bold text-lg text-[#E41623] uppercase pt-4">
+                                INJECTION NOZZLES
+                            </h3>
+                            <ul class="font-normal text-sm">
+                                <li class="hover:text-[#E41623] py-2"><a href="#">
+                                    <i class="fa-solid fa-square mr-2"></i>
+                                    For Cars
+                                </a></li>
+                                <li class="hover:text-[#E41623] py-2"><a href="#">
+                                    <i class="fa-solid fa-square mr-2"></i>
+                                    For Engine
+                                </a></li>
+                                <li class="hover:text-[#E41623] py-2"><a href="#">
+                                    <i class="fa-solid fa-square mr-2"></i>
+                                    For Marine
+                                </a></li>
+                            </ul>
+                    
+                            <h3 class="font-bold text-lg text-[#E41623] uppercase pt-4">
+                                VALVES
+                            </h3>
+                            <ul class="font-normal text-sm">
+                                <li class="hover:text-[#E41623] py-2"><a href="#">
+                                    <i class="fa-solid fa-square mr-2"></i>
+                                    Control Valve
+                                </a></li>
+                                <li class="hover:text-[#E41623] py-2"><a href="#">
+                                    <i class="fa-solid fa-square mr-2"></i>
+                                    Ball Valve
+                                </a></li>
+                                <li class="hover:text-[#E41623] py-2"><a href="#">
+                                    <i class="fa-solid fa-square mr-2"></i>
+                                    Gate Valve
+                                </a></li>
+                                <li class="hover:text-[#E41623] py-2"><a href="#">
+                                    <i class="fa-solid fa-square mr-2"></i>
+                                    Global Valve
+                                </a></li>
+                                <li class="hover:text-[#E41623] py-2"><a href="#">
+                                    <i class="fa-solid fa-square mr-2"></i>
+                                    Butterfly Valve
+                                </a></li>
+                                <li class="hover:text-[#E41623] py-2"><a href="#">
+                                    <i class="fa-solid fa-square mr-2"></i>
+                                    Sampling Valve
+                                </a></li>
+                            </ul>
+                    
+                            <h3 class="font-bold text-lg text-[#E41623] uppercase pt-4">
+                                BRISTLE BLASTER TOOLS
+                            </h3>
+                        </ul>
+                    </div>
+                </div>
+              </li>
+
+              <li>
+                <a href="s-service.html" class="flex py-2 pl-3 pr-4 text-[#333333] rounded hover:bg-gray-100 lg:hover:bg-transparent  lg:hover:text-[#E41623] lg:hover:underline lg:p-0">SERVICES</a>
+              </li>
+              <li>
+                <a href="s-manu.html" class="flex py-2 pl-3 pr-4 text-[#333333] rounded hover:bg-gray-100 lg:hover:bg-transparent  lg:hover:text-[#E41623] lg:hover:underline lg:p-0">MANUFACTURING</a>
+              </li>
+              <li>
+                <a href="s-news.html" class="flex py-2 pl-3 pr-4 text-[#333333] rounded hover:bg-gray-100 lg:hover:bg-transparent  lg:hover:text-[#E41623] lg:hover:underline lg:p-0">NEWS</a>
+              </li>
+              <li>
+                <a href="s-contact.html" class="flex py-2 pl-3 pr-4 text-[#333333] rounded hover:bg-gray-100 lg:hover:bg-transparent  lg:hover:text-[#E41623] lg:hover:underline lg:p-0">CONTACT US</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+    </div>
+
+    <!-- breadcrumbs -->
+    <div class="h-12 bg-[#F5F5F5] text-[#666666] mb-5">   
+        <div class="container mx-auto h-full flex">
+          <ol class="inline-flex items-center space-x-1 md:space-x-3">
+            <li class="inline-flex items-center">
+              <a href="#" class="inline-flex items-center text-sm font-normal hover:text-[#E41623]">
+                <i class="fa-solid fa-house-chimney"></i>
+              </a>
+            </li>
+            <li>
+              <div class="flex items-center">
+                <i class="fa-solid fa-chevron-right mr-2.5"></i>
+                <a href="#" class="text-sm font-normal hover:text-[#E41623]">News</a>
+              </div>
+            </li>
+            <li>
+              <div class="flex items-center">
+                <i class="fa-solid fa-chevron-right mr-2.5"></i>
+                <a href="#" class="text-sm font-normal hover:text-[#E41623] ">Activity News</a>
+              </div>
+            </li>
+          </ol>
+        </div>
+    </div>
+
+    <!-- main content -->
+    <div class="container mx-auto mt-14 mb-20 lg:grid lg:grid-cols-12">
+        <!-- left -->
+        <div class="lg:col-span-8 text-[#333333] text-lg">
+            <div class="relative py-4">
+                <img class="absolute left-0 bottom-0" src="./img/Rectangle 55.png" alt="">
+                <span class="absolute left-0 bottom-0 p-1.5 text-[#FFFFFF]">Nov 2, 2022</span>
+            </div>
+            <h1 class="font-bold text-[40px] leading-[48px] py-6">
+                New Chesterton 638 Electric Motor Grease - Empowering Pumps
+            </h1>
+            <hr>
+            <h4 class="font-bold text-lg py-6">
+                Our industrial pumps are wasting far more energy than we know – 
+                an estimated $10.2 billion/year! But by carefully watching and 
+                addressing pump efficiency, your facility can get control of these 
+                energy losses. In this post, we’ll look closer at what causes pump 
+                efficiency issues and specific steps for improving pump performance.
+            </h4>
+            <img src="./img/Rectangle 513.png" alt="Rect513" class="w-full">
+        
+            <h4 class="font-bold text-2xl py-6">
+                Pumps & Energy
+            </h4>
+            <p class="text-lg font-normal py-3">
+                In 2015, the US industrial sector consumed 800.7 million megawatt hours 
+                of electricity at a total cost of $56.4 billion. The pump portion of 
+                this is an estimated $10.2 billion of industrial expense.
+            </p>
+            <p class="text-lg font-normal py-6">
+                Energy used by pumps tends to be an “invisible cost,” often buried in 
+                other expense lines. The reality is that improving the efficiency of a 
+                pump can have an enormous impact on increasing the return on investment 
+                (ROI) of each pump in your operation.
+            </p>
+            <img src="./img/Rectangle 872.png" alt="rect872" class="w-full">
+
+            <h4 class="font-bold text-2xl py-6">
+                The Impact of Pump Efficiency
+            </h4>
+            <p class="text-lg font-normal py-3">
+                Plant managers are often surprised at the widespread 
+                nature of under-performing pumps. Several years ago, 
+                a Finnish research center* evaluated 1,690 pumps at 
+                20 process plants. They found that the average pumping 
+                efficiency was below 40%, and that over 10% of the pumps 
+                were running below 10% efficiency.
+            </p>
+            <p class="text-lg font-normal py-6">
+                To check whether your pump is operating efficiently, 
+                measure the power it consumes and check it against the pump’s 
+                performance curve. The pump curve will specify how much 
+                power you should be using at the pumps generated flow and pressure. 
+                You can then identify the specific energy savings that 
+                can be achieved by addressing inefficiencies. Your local 
+                power company may also be willing to provide energy audits as 
+                a means to save energy and lower peak loads.
+            </p>
+            <img src="./img/Rectangle 873.png" alt="rect873" class="w-full">
+        </div>
+
+        <!-- right -->
+        <div class="lg:col-span-4 mt-10 lg:flex justify-end">
+            <div class="bg-[#F1F1F1] w-full h-full lg:w-[360px] lg:h-fit px-5 pt-4 pb-8 sticky top-0">
+                <h4 class="uppercase font-bold text-2xl text-[#E41623]">
+                    RELATED NEWS
+                </h4>
+                <div class="pt-6">
+                    <hr>
+                    <p class="text-[#999999] text-sm font-normal pb-3 pt-4">
+                        Nov 2, 2022
+                    </p>
+                    <a href="#" class="hover:text-[#E41623] font-bold text-lg">
+                        <h4>
+                            New Chesterton 638 Electric Motor Grease - Empowering Pumps
+                        </h4>
+                    </a>
+                </div>
+
+                <div class="pt-4">
+                    <hr>
+                    <p class="text-[#999999] text-sm font-normal pb-3 pt-4">
+                        Nov 2, 2022
+                    </p>
+                    <a href="#" class="hover:text-[#E41623] font-bold text-lg">
+                        <h4>
+                            What is a Double Seal and When to Use One (Double Seals: Part 1)
+                        </h4>
+                    </a>
+                </div>
+                
+                <div class="pt-4">
+                    <hr>
+                    <p class="text-[#999999] text-sm font-normal pb-3 pt-4">
+                        Nov 2, 2022
+                    </p>
+                    <a href="#" class="hover:text-[#E41623] font-bold text-lg">
+                        <h4>
+                            What is a Double Seal and When to Use One (Double Seals: Part 2)
+                        </h4>
+                    </a>
+                </div>
+        
+                <div class="pt-4">
+                    <hr>
+                    <p class="text-[#999999] text-sm font-normal pb-3 pt-4">
+                        Nov 2, 2022
+                    </p>
+                    <a href="#" class="hover:text-[#E41623] font-bold text-lg">
+                        <h4>
+                            What is a Double Seal and When to Use One (Double Seals: Part 3)
+                        </h4>
+                    </a>
+                </div>
+                
+                <div class="pt-4">
+                    <hr>
+                    <p class="text-[#999999] text-sm font-normal pb-3 pt-4">
+                        Nov 2, 2022
+                    </p>
+                    <a href="#" class="hover:text-[#E41623] font-bold text-lg">
+                        <h4>
+                            Ways to Reduce the Use of Water in Mining
+                        </h4>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <!-- end main -->
+    
+    <!-- footer -->
+    <footer class=" bg-[#111111] text-[#FFFFFF] min-h-[363px] mt-20">
+        <div class="container mx-auto grid grid-cols-2 gap-6 lg:grid-cols-12">
+          <div class="mt-12 lg:col-span-5">
+            <h3 class="font-bold text-2xl pb-5 ">SIU INDUSTRY</h3>
+            <ul class="font-normal opacity-50 text-base space-y-4">
+                <li class="flex items-center">
+                    <i class="fa-solid fa-location-dot"></i>
+                    <a href="#" class="mx-2">611 Ta Quang Buu St. Dist.8, Ho Chi Minh City , Viet Nam</a>
+                </li>
+                <li class="flex items-center">
+                    <i class="fa-solid fa-globe"></i>
+                    <a href="#" class="mx-2">www.siuindustry.com</a>
+                </li>
+                <li class="flex items-center">
+                    <i class="fa-solid fa-envelope"></i>
+                    <a href="#" class="mx-2">sales@siuindustry.com</a>
+                </li>
+                <li class="flex items-center">
+                    <i class="fa-solid fa-phone"></i>
+                    <a href="#" class="mx-2">0918184800</a>
+                </li>
+                <li class="text-2xl mb-16">
+                  <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                  <a href="#"><i class="fa-brands fa-instagram px-5"></i></a>
+                  <a href="#"><i class="fa-brands fa-youtube"></i></a>  
+                </li>
+            </ul>
+          </div>
+          
+          <div class="mt-12 px-10 lg:col-span-2">
+            <h3 class="uppercase font-bold text-2xl">PRODUCTS</h3>
+            <ul class="list-disc font-normal text-base text-[#FFFFFF] opacity-50">
+              <li class="py-2 hover:text-[#E41623]">
+                  <a href="#">Gasket</a>
+              </li>
+              <li class="py-2 hover:text-[#E41623]">
+                  <a href="#">Packing</a>
+              </li>
+              <li class="py-2 hover:text-[#E41623]">
+                  <a href="#">O RING</a>
+              </li>
+              <li class="py-2 hover:text-[#E41623]">
+                  <a href="#">Hydraulic Seals</a>
+              </li>
+              <li class="py-2 hover:text-[#E41623]">
+                  <a href="#">Chemicals</a>
+              </li>
+              <li class="py-2 hover:text-[#E41623]">
+                  <a href="#">Lubricants</a>
+              </li>
+              <li class="py-2 hover:text-[#E41623]">
+                  <a href="#">Fittings</a>
+              </li>
+            </ul>
+          </div>
+  
+          <div class="py-8 px-5 lg:py-20 lg:px-10 lg:col-span-2">
+            <ul class="list-disc font-normal text-base text-[#FFFFFF] opacity-50">
+              <li class="py-2 hover:text-[#E41623]">
+                  <a href="#">Raw Materials​​​​</a>
+              </li>
+              <li class="py-2 hover:text-[#E41623]">
+                  <a href="#">Shims​​​​</a>
+              </li>
+              <li class="py-2 hover:text-[#E41623]">
+                  <a href="#">Injection Nozzles</a>
+              </li>
+              <li class="py-2 hover:text-[#E41623]">
+                  <a href="#">Blasting Machine</a>
+              </li>
+              <li class="py-2 hover:text-[#E41623]">
+                  <a href="#">MRO Products​​​​</a>
+              </li>
+              <li class="py-2 hover:text-[#E41623]">
+                  <a href="#">Tools​​​​</a>
+              </li>
+              <li class="py-2 hover:text-[#E41623]">
+                  <a href="#">Valves</a>
+              </li>
+            </ul>
+          </div>
+  
+          <div class="mt-12 px-10 lg:col-span-3">
+            <h3 class="uppercase font-bold text-2xl">QUICK LINKS</h3>
+            <ul class="list-disc font-normal text-base text-[#FFFFFF] opacity-50">
+                <li class="py-2 hover:text-[#E41623]">
+                    <a href="#">About us</a>
+                </li>
+                <li class="py-2 hover:text-[#E41623]">
+                    <a href="#">Services</a>
+                </li>
+                <li class="py-2 hover:text-[#E41623]">
+                    <a href="#">Manufacturing</a>
+                </li>
+                <li class="py-2 hover:text-[#E41623]">
+                    <a href="#">News</a>
+                </li>
+                <li class="py-2 hover:text-[#E41623]">
+                    <a href="#">Contact us</a>
+                </li>
+            </ul>
+          </div>
+        </div>
+      </footer>
+
+      <!-- copyright -->
+      <div class="  bg-[#E41623] text-white font-normal text-sm h-[78px]">
+        <div class="container mx-auto flex justify-between translate-y-1/2 pt-3">
+          <p>© 2022 SIU Industry. All Rights Reserved.</p>
+          <p>Terms and Conditions . Privacy Policy . Sitemap</p>
+        </div>
+      </div>
+
+    <script src="./app.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.4/flowbite.min.js"></script>
+</body>
+</html>
